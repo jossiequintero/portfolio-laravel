@@ -17,10 +17,13 @@ Route::get('/saludar/{nombre?}', function($nombre = 'Invitado'){
     return "Hola, $nombre";
 })->name('saludar');
 
+Route::get('/contacto', function(){
+    return "Session Contacto";
+})->name('contacto');
 Route::get('/', function(){
-    echo "<a href='/contacto'> Contacto 1 </a>";
-    echo "<a href='/contacto'> Contacto 2 </a>";
-    echo "<a href='/contacto'> Contacto 3 </a>";
-    echo "<a href='/contacto'> Contacto 4 </a>";
-    echo "<a href='/contacto'> Contacto 5 </a>";
+    echo "<a href='" . route('contacto') . "'> Contacto 1 </a></br>";
+    echo "<a href='" . route('contacto') . "'> Contacto 2 </a></br>";
+    echo "<a href='" . route('contacto') . "'> Contacto 3 </a></br>";
+    echo "<a href='" . route('contacto') . "'> Contacto 4 </a></br>";
+    echo "<a href='" . route('contacto') . "'> Contacto 5 </a></br>";
 });
