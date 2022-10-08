@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/saludar/{nombre?}', function($nombre = 'Invitado'){
+    return "Hola, $nombre";
+})->name('saludar');
+
+Route::get('/', function(){
+    echo "<a href='/contacto'> Contacto 1 </a>";
+    echo "<a href='/contacto'> Contacto 2 </a>";
+    echo "<a href='/contacto'> Contacto 3 </a>";
+    echo "<a href='/contacto'> Contacto 4 </a>";
+    echo "<a href='/contacto'> Contacto 5 </a>";
 });
