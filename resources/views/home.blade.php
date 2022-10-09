@@ -1,8 +1,6 @@
 @extends('template')
 
-@section('title')
-Home
-@endsection
+@section('title','Home')
 
 @section('content')
 <h1>HOME</h1>
@@ -10,4 +8,4 @@ Home
     <?php echo $nombre ?? 'Invitado' ?>
 </p>
 
-@endsection
+@endsection()
