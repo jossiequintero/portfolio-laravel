@@ -6,13 +6,15 @@
 
     <h1>PORTFOLIO</h1>
     <ul>
-        @if ($proyectos)
-            @foreach ($proyectos as $proyecto)
+        @isset($proyectos)
+            @forelse ($proyectos as $proyecto)
                 <li>{{ $proyecto['title'] }}</li>
-            @endforeach
+            @empty
+                <li>Nenhum proyecto cadastrado</li>
+            @endforelse
         @else
-            <li>Nenhum proyecto cadastrado</li>
-        @endif
+            Ocurrio un error
+        @endisset
     </ul>
 
 @endsection()
