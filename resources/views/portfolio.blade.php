@@ -1,14 +1,16 @@
 @extends('template')
 
-@section('title','Portfolio')
+@section('title', 'Portfolio')
 
 @section('content')
 
-<h1>PORTFOLIO</h1>
-<ul>
-    @foreach ($proyectos as $proyecto)
-    <li>{{ $proyecto['title'] }}</li>
-    @endforeach
-</ul>
+    <h1>PORTFOLIO</h1>
+    <ul>
+        @if ($proyectos)
+            @foreach ($proyectos as $proyecto)
+                <li>{{ $proyecto['title'] }}</li>
+            @endforeach
+        @endif
+    </ul>
 
 @endsection()

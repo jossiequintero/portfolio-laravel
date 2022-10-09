@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 $proyectos = [
-    ['title' => 'Proyecto #1'],
-    ['title' => 'Proyecto #2'],
-    ['title' => 'Proyecto #3'],
-    ['title' => 'Proyecto #4'],
+    // ['title' => 'Proyecto #1'],
+    // ['title' => 'Proyecto #2'],
+    // ['title' => 'Proyecto #3'],
+    // ['title' => 'Proyecto #4'],
 ];
 
 Route::get('/', function () {
