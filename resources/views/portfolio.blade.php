@@ -10,6 +10,8 @@
             @foreach ($proyectos as $proyecto)
                 <li>{{ $proyecto['title'] }}</li>
             @endforeach
+        @else
+            <li>Nenhum proyecto cadastrado</li>
         @endif
     </ul>
 
