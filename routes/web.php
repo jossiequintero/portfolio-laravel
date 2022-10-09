@@ -13,17 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/saludar/{nombre?}', function($nombre = 'Invitado'){
-    return "Hola, $nombre";
-})->name('saludar');
+Route::get('/', function () {
+    $nombre = "Jossie Quintero";
+    return view('home')->with(['nombre' => $nombre]);
+})->name('home');
 
-Route::get('/contacto', function(){
-    return "Session Contacto";
-})->name('contacto');
-Route::get('/', function(){
-    echo "<a href='" . route('contacto') . "'> Contacto 1 </a></br>";
-    echo "<a href='" . route('contacto') . "'> Contacto 2 </a></br>";
-    echo "<a href='" . route('contacto') . "'> Contacto 3 </a></br>";
-    echo "<a href='" . route('contacto') . "'> Contacto 4 </a></br>";
-    echo "<a href='" . route('contacto') . "'> Contacto 5 </a></br>";
-});
+Route::view('/about', 'about')->name('about');
+Route::view('/contact', 'contact')->name('contact');
+Route::view('/portfolio', 'portfolio')->name('portfolio');
